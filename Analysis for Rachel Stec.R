@@ -56,7 +56,7 @@ library(ggplot2)
 ggplot(Stacked.PostSurvey, aes(ind, values)) +
   scale_y_continuous(breaks = 1:7, labels = c("Strongly disagree", "Disagree", "Somewhat disagree", "Neutral", "Somewhat agree", "Agree", "Strongly agree")) +
   ylim("Strongly disagree", "Disagree", "Somewhat disagree", "Neutral", "Somewhat agree", "Agree", "Strongly agree") +
-  ggtitle("Graph of Post-Intervention Survey, Measuring Nurse Confidence and Self-Efficacy") +
+  ggtitle("Results of the Post-Intervention Survey, Measuring Nurses' Confidence and Self-Efficacy") +
   xlab("Question") +
   ylab("Self-Perceived Confidence (on a 7-point Likert Scale)") +
   geom_boxplot() + coord_flip() + geom_point()
