@@ -44,6 +44,9 @@ pchisq(total, df = 2-1, lower.tail = FALSE) # = 0.1354
 ## Reading in/naming data
 PostSurvey <- read.csv("https://raw.githubusercontent.com/abbyvenz/Data-for-Rachel-Stec/main/Post%20Intervention%20Nursing%20Survey.csv")
 
+## Getting summary statistics of each question
+get_summary_stats(PostSurvey[,2:8], type = "mean_sd")
+
 ## Stacking the data
 Stacked.PostSurvey <- cbind(PostSurvey[1], stack(PostSurvey[2:8]))
 
