@@ -31,11 +31,7 @@ expected.post.ratio = post.res.days/(post.res.days + pre.res.days)
 expected.post.CAUTI = total.CAUTI*expected.post.ratio
 
 ## Analyzing the difference in CAUTI Rates
-dbinom(post.CAUTI, total.CAUTI, expected.post.ratio) # = .066295
-
-total = 10*(sum(dbinom(post.CAUTI:total.CAUTI, total.CAUTI, expected.post.ratio))*2) # = 2.22298
-
-pchisq(total, df = 2-1, lower.tail = FALSE) # = 0.1354
+sum(dbinom(post.CAUTI:total.CAUTI, total.CAUTI, expected.post.ratio)) # = 0.1115
 
 
 
